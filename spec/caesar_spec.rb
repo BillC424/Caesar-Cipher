@@ -16,5 +16,11 @@ describe CaesarCipher do
       caesar = CaesarCipher.new
       expect(caesar.caesar_cipher("Wow! I'm, So; Impressed: Now?.", 5)).to eql("Btb! Nr, Xt; Nruwjxxji: Stb?.")
     end
+
+    it "does the caesar cipher shift properly" do 
+      caesar = CaesarCipher.new
+      expect(caesar.caesar_cipher("What a String!", 5)).to eql("Bmfy f Xywnsl!")
+    end
+
   end
 end
