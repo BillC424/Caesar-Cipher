@@ -1,3 +1,5 @@
+class CaesarCipher
+
 def caesar_cipher(string, shift)
   
     alphabet_reversed =["z","y","x","w","v","u","t","s","r","q","p","o","n","m","l","k","j","i","h","g","f","e","d","c","b","a"]
@@ -25,5 +27,8 @@ def caesar_cipher(string, shift)
   
   indexes.join
   end
-  
-  p caesar_cipher("What a String!", 4) 
+
+end
+
+caesar = CaesarCipher.new
+p caesar.caesar_cipher("What a String!", 4) 
