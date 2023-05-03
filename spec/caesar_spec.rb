@@ -6,5 +6,15 @@ describe CaesarCipher do
       caesar = CaesarCipher.new
       expect(caesar.caesar_cipher("There are spaces", 5)).to eql("Ymjwj fwj xufhjx")
     end    
+
+    it "does not change case" do
+      caesar = CaesarCipher.new
+      expect(caesar.caesar_cipher("tHe cAsE dOeS nOt cHaNgE sPoNgEbOb", 5)).to eql("yMj hFxJ iTjX sTy hMfSlJ xUtSlJgTg")
+    end
+
+    it "does not change punctuation" do 
+      caesar = CaesarCipher.new
+      expect(caesar.caesar_cipher("Wow! I'm, So; Impressed: Now?.", 5)).to eql("Btb! Nr, Xt; Nruwjxxji: Stb?.")
+    end
   end
 end
